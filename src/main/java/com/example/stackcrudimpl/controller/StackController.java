@@ -6,16 +6,16 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/stack")
-public class StackController<E> {
+public class StackController {
 
-  private final StackInterface<E> stackInterface;
+  private final StackInterface stackInterface;
 
-  public StackController(StackInterface<E> stackInterface) {
+  public StackController(StackInterface stackInterface) {
     this.stackInterface = stackInterface;
   }
 
   @PostMapping("/push/{element}")
-  public ResponseEntity<String> push(@PathVariable E element) {
+  public ResponseEntity<String> push(@PathVariable Integer element) {
     stackInterface.push(element);
     return ResponseEntity.ok("Element is pushed into the stack");
   }

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class StackInterfaceImpl implements StackInterface {
   @Override
-  public void push(Object element) {
+  public void push(Integer element) {
     System.out.println("Element pushed: " + element);
   }
 

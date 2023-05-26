@@ -1,9 +1,9 @@
 package com.example.stackcrudimpl.service;
 
 
-public interface StackInterface<E> {
+public interface StackInterface {
 
-    public void push(E element);
+    public void push(Integer element);
 
     public void pop();
 
